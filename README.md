@@ -1,5 +1,7 @@
 # Nix Flake Templates
 
+[한국어](./README.ko.md)
+
 <!--toc:start-->
 - [Nix Flake Templates](#nix-flake-templates)
   - [List of Templates](#list-of-templates)
@@ -15,7 +17,7 @@
 ## List of Templates
 
 ```sh
-nix flake show github:vst/nix-flake-templates
+nix flake show github:partrita/flake-templates
 ```
 
 ## `trivial` &mdash; A Basic Nix Flake Template
@@ -26,14 +28,14 @@ multiple target systems using [flake-utils].
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#trivial
+nix flake init --template github:partrita/flake-templates#trivial
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/trivial" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/trivial" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
@@ -50,14 +52,14 @@ output.
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#python-script
+nix flake init --template github:partrita/flake-templates#python-script
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/python-script" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/python-script" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
@@ -81,14 +83,14 @@ This template provides a Python package with some goodies including:
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#python-package
+nix flake init --template github:partrita/flake-templates#python-package
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/python-package" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/python-package" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
@@ -110,7 +112,7 @@ nix run ./templates/python-package
 >       gzip -d - |
 >       install -m 755 /dev/stdin /usr/local/bin/taplo
 > $ mkdir -p /tmp/test && cd /tmp/test
-> $ git clone https://github.com/vst/nix-flake-templates.git
+> $ git clone https://github.com/partrita/flake-templates.git
 > $ cd nix-flake-templates/templates/python-package
 > $ python3 -m venv .venv
 > $ source .venv/bin/activate
@@ -129,7 +131,7 @@ include all the dependencies needed to comfortably work on the application.
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#haskell-simple-app
+nix flake init --template github:partrita/flake-templates#haskell-simple-app
 ```
 
 ## `cpp-cmake-project` &mdash; A C++/CMake Project Template
@@ -141,14 +143,14 @@ development environment with `cmake` and a C++ compiler.
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#cpp-cmake-project
+nix flake init --template github:partrita/flake-templates#cpp-cmake-project
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/cpp-cmake-project" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/cpp-cmake-project" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
@@ -166,14 +168,14 @@ with Node.js and npm.
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#nodejs-app
+nix flake init --template github:partrita/flake-templates#nodejs-app
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/nodejs-app" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/nodejs-app" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
@@ -192,14 +194,14 @@ This template provides a basic setup for a Rust application using Cargo and
 Use the template:
 
 ```sh
-nix flake init --template github:vst/nix-flake-templates#rust-app
+nix flake init --template github:partrita/flake-templates#rust-app
 ```
 
 You can run the default package defined in the Nix Flake without checking out
 the repository:
 
 ```sh
-nix run "github:vst/nix-flake-templates?dir=templates/rust-app" --no-write-lock-file
+nix run "github:partrita/flake-templates?dir=templates/rust-app" --no-write-lock-file
 ```
 
 If you have checked out this repository, then:
