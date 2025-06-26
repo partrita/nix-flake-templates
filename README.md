@@ -7,6 +7,9 @@
   - [`python-script` &mdash; A Python Program Script Template](#python-script-mdash-a-python-program-script-template)
   - [`python-package` &mdash; A Python Package Template](#python-package-mdash-a-python-package-template)
   - [`haskell-simple-app` &mdash; A Simple Haskell Application](#haskell-simple-app-mdash-a-simple-haskell-application)
+  - [`cpp-cmake-project` &mdash; A C++/CMake Project Template](#cpp-cmake-project-mdash-a-ccmake-project-template)
+  - [`nodejs-app` &mdash; A Node.js Application Template](#nodejs-app-mdash-a-nodejs-application-template)
+  - [`rust-app` &mdash; A Rust Application Template](#rust-app-mdash-a-rust-application-template)
 <!--toc:end-->
 
 ## List of Templates
@@ -129,6 +132,83 @@ Use the template:
 nix flake init --template github:vst/nix-flake-templates#haskell-simple-app
 ```
 
+## `cpp-cmake-project` &mdash; A C++/CMake Project Template
+
+This template provides a basic setup for a C++ project using CMake. It includes a
+simple `main.cpp`, a `CMakeLists.txt`, and a `flake.nix` that sets up a
+development environment with `cmake` and a C++ compiler.
+
+Use the template:
+
+```sh
+nix flake init --template github:vst/nix-flake-templates#cpp-cmake-project
+```
+
+You can run the default package defined in the Nix Flake without checking out
+the repository:
+
+```sh
+nix run "github:vst/nix-flake-templates?dir=templates/cpp-cmake-project" --no-write-lock-file
+```
+
+If you have checked out this repository, then:
+
+```sh
+nix run ./templates/cpp-cmake-project
+```
+
+## `nodejs-app` &mdash; A Node.js Application Template
+
+This template sets up a simple Node.js application. It includes a `package.json`,
+an `index.js` script, and a `flake.nix` providing a development environment
+with Node.js and npm.
+
+Use the template:
+
+```sh
+nix flake init --template github:vst/nix-flake-templates#nodejs-app
+```
+
+You can run the default package defined in the Nix Flake without checking out
+the repository:
+
+```sh
+nix run "github:vst/nix-flake-templates?dir=templates/nodejs-app" --no-write-lock-file
+```
+
+If you have checked out this repository, then:
+
+```sh
+nix run ./templates/nodejs-app
+```
+
+## `rust-app` &mdash; A Rust Application Template
+
+This template provides a basic setup for a Rust application using Cargo and
+[crane] for Nix integration. It includes a `src/main.rs`, a `Cargo.toml`, and a
+`flake.nix` that configures a development environment with the Rust toolchain,
+`rust-analyzer`, and builds the package using `crane`.
+
+Use the template:
+
+```sh
+nix flake init --template github:vst/nix-flake-templates#rust-app
+```
+
+You can run the default package defined in the Nix Flake without checking out
+the repository:
+
+```sh
+nix run "github:vst/nix-flake-templates?dir=templates/rust-app" --no-write-lock-file
+```
+
+If you have checked out this repository, then:
+
+```sh
+nix run ./templates/rust-app
+```
+
 <!-- REFERENCE -->
 
 [flake-utils]: https://github.com/numtide/flake-utils
+[crane]: https://github.com/ipetkov/crane
