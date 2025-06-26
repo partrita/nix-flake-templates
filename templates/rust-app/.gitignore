@@ -1,0 +1,13 @@
+# Rust target directory
+/target
+
+# Rust Cargo lock file
+Cargo.lock
+
+# Editor configuration files
+.idea/
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db

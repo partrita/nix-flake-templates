@@ -23,6 +23,21 @@
         description = "A simple Haskell application template.";
       };
 
+      cpp-cmake-project = {
+        path = ./templates/cpp-cmake-project;
+        description = "A C++/CMake project template.";
+      };
+
+      nodejs-app = {
+        path = ./templates/nodejs-app;
+        description = "A Node.js application template.";
+      };
+
+      rust-app = {
+        path = ./templates/rust-app;
+        description = "A Rust application template.";
+      };
+
       defaultTemplate = self.templates.trivial;
     };
   };
